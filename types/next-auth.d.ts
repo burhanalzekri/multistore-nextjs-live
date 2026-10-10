@@ -1,0 +1,1 @@
+import "next-auth"; declare module "next-auth" { interface Session { user: { id: string; role: "SUPER_ADMIN"|"SHOP_OWNER"|"SHOP_STAFF"|"CUSTOMER"; preferredShopId?: string|null } & DefaultSession["user"] } } declare module "next-auth/jwt" { interface JWT { role?: string; preferredShopId?: string|null } }
